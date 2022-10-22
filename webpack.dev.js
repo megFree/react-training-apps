@@ -1,22 +1,20 @@
 const path = require('path');
-const { merge } = require('webpack-merge');
-const common = require('./webpack.common');
 const ESLintWebpackPlugin = require('eslint-webpack-plugin');
 const StylelintWebpackPlugin = require('stylelint-webpack-plugin');
 
-module.exports = merge(common, {
+module.exports = (env) => ({
     mode: 'development',
     plugins: [
         new ESLintWebpackPlugin(),
         new StylelintWebpackPlugin(),
     ],
     output: {
-        path: path.resolve(__dirname, './dist'),
+        path: path.resolve(__dirname, `./dist/${env.PROJECT_NAME}`),
         filename: '[name].js',
     },
     devServer: {
         static: {
-            directory: path.resolve(__dirname, './src'),
+            directory: path.resolve(__dirname, `./src/projects/${env.PROJECT_NAME}`),
         },
     },
     module: {

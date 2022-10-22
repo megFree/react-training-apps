@@ -2,13 +2,11 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { merge } = require('webpack-merge');
-const common = require('./webpack.common');
 
-module.exports = merge(common, {
+module.exports = (env) => ({
     mode: 'production',
     output: {
-        path: path.resolve(__dirname, './dist'),
+        path: path.resolve(__dirname, `./dist/${env.PROJECT_NAME}`),
         filename: '[name].[hash].js',
     },
     plugins: [

@@ -1,13 +1,13 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = {
-    entry: './src/index.js',
+module.exports = (env) => ({
+    entry: `/src/projects/${env.PROJECT_NAME}/index.js`,
     resolve: {
         alias: {
-            '@': path.resolve(__dirname, './src/'),
-            '~': path.resolve(__dirname, './src/js/components'),
-            img: path.resolve(__dirname, './src/assets/img'),
+            '@': path.resolve(__dirname, `./src/projects/${env.PROJECT_NAME}/`),
+            '~': path.resolve(__dirname, `./src/projects/${env.PROJECT_NAME}/js/components`),
+            img: path.resolve(__dirname, `./src/projects/${env.PROJECT_NAME}/assets/img`),
         },
     },
     module: {
@@ -42,7 +42,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'src/index.html',
+            template: `./src/projects/${env.PROJECT_NAME}/index.html`,
         }),
     ],
-};
+});

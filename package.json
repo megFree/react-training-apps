@@ -2,10 +2,13 @@
   "name": "react-personal-card",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "dev": "webpack serve --config webpack.dev.js --open",
-    "build": "webpack --config webpack.prod.js"
+    "dev-personal-card": "webpack serve --config webpack.config.js --open --env PROJECT_NAME=personal-card MODE=dev",
+    "build-personal-card": "webpack --config webpack.config.js --env PROJECT_NAME=personal-card MODE=build",
+    "deploy-personal-card": "PROJECT_NAME=personal-card node deploy.js",
+    "dev-airbnb-experiences": "webpack serve --config webpack.config.js --open --env PROJECT_NAME=airbnb-experiences MODE=dev",
+    "build-airbnb-experiences": "webpack --config webpack.config.js --env PROJECT_NAME=airbnb-experiences MODE=build",
+    "deploy-airbnb-experiences": "PROJECT_NAME=airbnb-experiences node deploy.js"
   },
   "author": "Sergey Grechishkin",
   "license": "ISC",
