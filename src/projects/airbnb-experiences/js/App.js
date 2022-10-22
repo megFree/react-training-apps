@@ -1,8 +1,13 @@
 import React from 'react';
 import './App.scss';
+import { Header } from '~/Header/Header';
+import { AppBody } from '~/AppBody/AppBody';
 
-export function App () {
+export function App() {
     return (
-        <main className="app">App</main>
+        <main className="app">
+            <Header />
+            <AppBody />
+        </main>
     );
 }

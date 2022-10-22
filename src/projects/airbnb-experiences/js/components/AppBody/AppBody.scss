@@ -1,0 +1,16 @@
+.app-body {
+    padding: 30px 36px;
+}
+
+.app-body__grid-image-container {
+    width: 100%;
+    height: 280px;
+    margin-bottom: 40px;
+}
+
+.app-body__grid-image {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}

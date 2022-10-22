@@ -8,7 +8,7 @@ import { SocialFooter } from '~/SocialFooter/SocialFooter';
 
 import avatarImg from '@/assets/img/avatar.jpg';
 
-export function Card ({ className }) {
+export function Card({ className }) {
     return (
         <div className={ `card ${className}` }>
             <img className="card__avatar" src={avatarImg} alt="avatar" />

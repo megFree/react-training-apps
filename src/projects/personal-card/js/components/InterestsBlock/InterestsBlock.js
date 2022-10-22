@@ -1,7 +1,7 @@
 import React from 'react';
 import './InterestsBlock.scss';
 
-export function InterestsBlock ({ className }) {
+export function InterestsBlock({ className }) {
     return (
         <div className={ `interests-block ${className}` }>
             <div className="interests-block__title">

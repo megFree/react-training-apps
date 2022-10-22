@@ -1,7 +1,7 @@
 import React from 'react';
 import './AboutBlock.scss';
 
-export function AboutBlock ({ className }) {
+export function AboutBlock({ className }) {
     return (
         <div className={ `about-block ${className}` }>
             <div className="about-block__title">

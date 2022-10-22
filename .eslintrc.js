@@ -21,5 +21,6 @@ module.exports = {
         'no-extra-semi': ['off'],
         semi: ['error', 'always'],
         'comma-dangle': ['error', 'always-multiline'],
+        'space-before-function-paren': ['error', 'never'],
     },
 };

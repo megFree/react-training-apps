@@ -1,0 +1,68 @@
+.experiences-card {
+    width: 176px;
+    position: relative;
+}
+
+.experiences-card__image-container {
+    width: 100%;
+    margin-bottom: 9px;
+}
+
+.experiences-card__image {
+    width: 100%;
+}
+
+.experiences-card__status {
+    position: absolute;
+    background: #fff;
+    padding: 4px 6px;
+    border-radius: 2px;
+    font-size: 10px;
+    line-height: 100%;
+    top: 6px;
+    left: 6px;
+}
+
+.experiences-card__info-rating {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 100%;
+    margin-bottom: 8px;
+}
+
+.experiences-card__info-rating-ico {
+    margin-right: 2px;
+    width: 14px;
+    height: 14px;
+}
+
+.experiences-card__info-rating-exact {
+    color: #222;
+    margin-right: 2px;
+}
+
+.experiences-card__info-rated-by {
+    color: #918e9b;
+    margin-right: 2px;
+}
+
+.experiences-card__info-dot {
+    color: #918e9b;
+    margin-right: 2px;
+}
+
+.experiences-card__info-title {
+    color: #222;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.experiences-card__info-price {
+    font-size: 12px;
+    line-height: 100%;
+}
+
+.experiences-card__info-price-exact {
+    font-weight: 600;
+}
