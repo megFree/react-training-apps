@@ -1,5 +1,7 @@
 .experiences-card-list {
     display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 .experiences-card-list__item {
