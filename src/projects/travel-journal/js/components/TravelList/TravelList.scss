@@ -1,0 +1,10 @@
+.travel-list {
+    padding: 45px 40px;
+    list-style: none;
+}
+
+.travel-list__item {
+    &:not(:last-child) {
+        border-bottom: 1px solid #f5f5f5;
+    }
+}
