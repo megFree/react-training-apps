@@ -1,0 +1,30 @@
+.header {
+    background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__title {
+    display: flex;
+}
+
+.header__logo {
+    margin-right: 7px;
+}
+
+.header__title-text {
+    font-family: Karla, sans-serif;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+.header__sub-title {
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+}

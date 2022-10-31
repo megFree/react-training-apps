@@ -11,7 +11,10 @@
     "deploy-airbnb-experiences": "PROJECT_NAME=airbnb-experiences node deploy.js",
     "dev-travel-journal": "webpack serve --config webpack.config.js --open --env PROJECT_NAME=travel-journal MODE=dev",
     "build-travel-journal": "webpack --config webpack.config.js --env PROJECT_NAME=travel-journal MODE=build",
-    "deploy-travel-journal": "PROJECT_NAME=travel-journal node deploy.js"
+    "deploy-travel-journal": "PROJECT_NAME=travel-journal node deploy.js",
+    "dev-meme-generator": "webpack serve --config webpack.config.js --open --env PROJECT_NAME=meme-generator MODE=dev",
+    "build-meme-generator": "webpack --config webpack.config.js --env PROJECT_NAME=meme-generator MODE=build",
+    "deploy-meme-generator": "PROJECT_NAME=travel-journal node deploy.js"
   },
   "author": "Sergey Grechishkin",
   "license": "ISC",
@@ -47,6 +50,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "lodash": "^4.17.21",
     "normalize.css": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

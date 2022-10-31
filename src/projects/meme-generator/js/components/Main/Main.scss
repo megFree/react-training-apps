@@ -1,0 +1,16 @@
+.main {
+    background: #fff;
+    padding: 36px;
+}
+
+.main__inputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 17px;
+    margin-bottom: 15px;
+}
+
+.main__button {
+    width: 100%;
+    margin-bottom: 36px;
+}
