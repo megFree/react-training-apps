@@ -6,7 +6,7 @@ module.exports = (env) => ({
     resolve: {
         alias: {
             '@': path.resolve(__dirname, `./src/projects/${env.PROJECT_NAME}/`),
-            '~': path.resolve(__dirname, `./src/projects/${env.PROJECT_NAME}/js/components`),
+            '~': path.resolve(__dirname, `./src/projects/${env.PROJECT_NAME}/components`),
             img: path.resolve(__dirname, `./src/projects/${env.PROJECT_NAME}/assets/img`),
         },
     },

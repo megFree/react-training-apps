@@ -14,7 +14,9 @@
     "deploy-travel-journal": "PROJECT_NAME=travel-journal node deploy.js",
     "dev-meme-generator": "webpack serve --config webpack.config.js --open --env PROJECT_NAME=meme-generator MODE=dev",
     "build-meme-generator": "webpack --config webpack.config.js --env PROJECT_NAME=meme-generator MODE=build",
-    "deploy-meme-generator": "PROJECT_NAME=travel-journal node deploy.js"
+    "deploy-meme-generator": "PROJECT_NAME=travel-journal node deploy.js",
+    "dev-tests": "webpack serve --config webpack.config.js --open --env PROJECT_NAME=tests MODE=dev",
+    "build-all": "concurrently \"npm:build-personal-card\" \"npm:build-airbnb-experiences\" \"npm:build-travel-journal\" \"npm:build-meme-generator\""
   },
   "author": "Sergey Grechishkin",
   "license": "ISC",
@@ -24,6 +26,7 @@
     "@babel/preset-react": "^7.18.6",
     "babel-loader": "^8.2.5",
     "clean-webpack-plugin": "^4.0.0",
+    "concurrently": "^7.5.0",
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^4.2.2",
     "eslint": "^8.25.0",
