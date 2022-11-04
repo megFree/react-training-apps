@@ -36,7 +36,6 @@ export function Main() {
     }
 
     function handleTextInput(event) {
-        console.log(event);
         const { name, value } = event.currentTarget;
         setState(prevState => ({
             ...prevState,
@@ -52,14 +51,14 @@ export function Main() {
                     placeholder="Upper text"
                     name="topText"
                     value={state.topText}
-                    onChange={ev => handleTextInput(ev)}
+                    onChange={handleTextInput}
                 />
                 <Input
                     className="main__input"
                     placeholder="Bottom text"
                     name="bottomText"
                     value={state.bottomText}
-                    onChange={ev => handleTextInput(ev)}
+                    onChange={handleTextInput}
                 />
             </div>
             <Button
