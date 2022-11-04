@@ -1,7 +1,7 @@
 import React from 'react';
 import './Main.scss';
 
-import { getRandomImageUrl } from '@/mock/api';
+import { random } from 'lodash';
 
 import { Input } from '~/base/Input/Input';
 import { Button } from '~/base/Button/Button';
@@ -11,11 +11,35 @@ export function Main() {
     const [state, setState] = React.useState({
         topText: '',
         bottomText: '',
-        randomImage: getRandomImageUrl(),
+        memes: '',
+        currentImage: '',
     });
 
-    function getNewImage() {
-        setState(prevState => ({ ...prevState, randomImage: getRandomImageUrl() }));
+    React.useEffect(() => {
+        fetch('https://api.imgflip.com/get_memes')
+            .then(response => response.json())
+            .then(data => data.data)
+            .then(data => {
+                const { memes } = data;
+                console.log('memes', memes);
+                // устанавливаю стейт
+                setState(prevState => {
+                    return {
+                        ...prevState,
+                        memes,
+                        currentImage: data.memes[random(0, data.memes.length - 1)],
+                    };
+                });
+                // стейт не обновлён (??????)
+                console.log('state', state);
+            });
+    }, []);
+
+    function selectRandomImage() {
+        setState(prevState => ({
+            ...prevState,
+            currentImage: state.memes[random(0, state.memes.length - 1)],
+        }));
     }
 
     function handleTextInput(event) {
@@ -47,11 +71,11 @@ export function Main() {
             <Button
                 className="main__button"
                 text={'Get a new meme image'}
-                onClick={getNewImage}
+                onClick={selectRandomImage}
             />
             <Meme
                 className="main__meme"
-                imageUrl={state.randomImage}
+                // imageUrl={state.currentImage.url}
                 bottomText={state.bottomText}
                 topText={state.topText}
             />
