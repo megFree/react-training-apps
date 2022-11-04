@@ -1,8 +1,31 @@
 .meme {
     border-radius: 2px;
     overflow: hidden;
+    position: relative;
 }
 
 .meme__image {
     width: 100%;
+}
+
+.meme__text {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: Impact, sans-serif;
+    font-size: 42px;
+    line-height: 1;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px black;
+
+    &--top {
+        top: 25px;
+    }
+
+    &--bottom {
+        bottom: 25px;
+    }
 }
