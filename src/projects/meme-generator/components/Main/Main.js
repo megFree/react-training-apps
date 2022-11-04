@@ -11,7 +11,7 @@ export function Main() {
     const [state, setState] = React.useState({
         topText: '',
         bottomText: '',
-        memes: '',
+        memes: [],
         currentImage: '',
     });
 
