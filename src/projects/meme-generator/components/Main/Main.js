@@ -35,16 +35,30 @@ export function Main() {
         setState(prevState => ({ ...prevState, randomImage: getRandomImageUrl() }));
     }
 
+    function handleTextInput(event) {
+        const { name, value } = event.currentTarget;
+        setState(prevState => ({
+            ...prevState,
+            [name]: value,
+        }));
+    }
+
     return (
         <div className="main">
             <div className="main__inputs">
                 <Input
                     className="main__input"
                     placeholder="Upper text"
+                    name="topText"
+                    value={state.topText}
+                    onChange={handleTextInput}
                 />
                 <Input
                     className="main__input"
                     placeholder="Bottom text"
+                    name="bottomText"
+                    value={state.bottomText}
+                    onChange={handleTextInput}
                 />
             </div>
             <Button
@@ -52,7 +66,12 @@ export function Main() {
                 text={'Get a new meme image'}
                 onClick={getNewImage}
             />
-            <Meme className="main__meme" imageUrl={state.randomImage} />
+            <Meme
+                className="main__meme"
+                imageUrl={state.randomImage}
+                bottomText={state.bottomText}
+                topText={state.topText}
+            />
         </div>
     );
 }
