@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.scss';
 
-import { Form } from '~/Form/Form';
+import { StarWarsDataTest } from '~/StarWarsDataTest/StarWarsDataTest';
 
 export function App() {
     return (
         <main className="app">
-            <Form />
+            <StarWarsDataTest />
         </main>
     );
 }
