@@ -21,17 +21,11 @@ export function Main() {
             .then(data => data.data)
             .then(data => {
                 const { memes } = data;
-                console.log('memes', memes);
-                // устанавливаю стейт
-                setState(prevState => {
-                    return {
-                        ...prevState,
-                        memes,
-                        currentImage: data.memes[random(0, data.memes.length - 1)],
-                    };
-                });
-                // стейт не обновлён (??????)
-                console.log('state', state);
+                setState(prevState => ({
+                    ...prevState,
+                    memes,
+                    currentImage: data.memes[random(0, data.memes.length - 1)],
+                }));
             });
     }, []);
 
@@ -75,7 +69,7 @@ export function Main() {
             />
             <Meme
                 className="main__meme"
-                // imageUrl={state.currentImage.url}
+                imageUrl={state.currentImage.url}
                 bottomText={state.bottomText}
                 topText={state.topText}
             />
