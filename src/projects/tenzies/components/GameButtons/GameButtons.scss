@@ -1,0 +1,26 @@
+.game-buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 18px;
+    row-gap: 18px;
+}
+
+.game-buttons__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Karla, sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    box-shadow: 0 2px 2px rgb(0 0 0 / 15%);
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+
+    &--green {
+        background: #59e391;
+    }
+}

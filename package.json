@@ -16,7 +16,10 @@
     "build-meme-generator": "webpack --config webpack.config.js --env PROJECT_NAME=meme-generator MODE=build",
     "deploy-meme-generator": "PROJECT_NAME=travel-journal node deploy.js",
     "dev-tests": "webpack serve --config webpack.config.js --open --env PROJECT_NAME=tests MODE=dev",
-    "build-all": "concurrently \"npm:build-personal-card\" \"npm:build-airbnb-experiences\" \"npm:build-travel-journal\" \"npm:build-meme-generator\""
+    "build-all": "concurrently \"npm:build-personal-card\" \"npm:build-airbnb-experiences\" \"npm:build-travel-journal\" \"npm:build-meme-generator\"",
+    "dev-tenzies": "webpack serve --config webpack.config.js --open --env PROJECT_NAME=tenzies MODE=dev",
+    "build-tenzies": "webpack --config webpack.config.js --env PROJECT_NAME=tenzies MODE=build",
+    "deploy-tenzies": "PROJECT_NAME=tenzies node deploy.js"
   },
   "author": "Sergey Grechishkin",
   "license": "ISC",
